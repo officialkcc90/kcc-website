@@ -7,6 +7,71 @@
 <title>Kanpur Cricket Championship (KCC)</title>
 
 <style>
+.hero{
+    position:relative;
+    background:url("stadium.jpg") center center/cover no-repeat;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.55);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    color:#fff;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:52px;
+    color:#fff;
+}
+
+.hero h2{
+    color:#ffd700;
+}
+
+.hero p{
+    color:#fff;
+}
+
+.player-left,
+.player-right{
+    position:absolute;
+    bottom:0;
+    width:230px;
+    z-index:2;
+}
+
+.player-left{
+    left:20px;
+}
+
+.player-right{
+    right:20px;
+}
+
+@media(max-width:768px){
+    .player-left,
+    .player-right{
+        width:120px;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+}
 
 *{
 margin:0;
