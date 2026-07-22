@@ -84,12 +84,18 @@ text-align:center;
 }
 
 .qr-image{
-width:220px;
+width:100%;
+max-width:140px;
 height:auto;
-max-width:100%;
 display:block;
 margin:15px auto;
 border-radius:10px;
+}
+
+@media (max-width:768px){
+.qr-image{
+max-width:120px;
+}
 }
 
 @media (max-width:768px){
