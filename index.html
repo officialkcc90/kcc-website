@@ -1,77 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Kanpur Cricket Championship (KCC)</title>
 
 <style>
-.hero{
-    position:relative;
-    background:url("file_00000000753881fb9b33012616a6fbb0.png") center center/cover no-repeat;
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
-
-.hero::before{
-    content:"";
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,.55);
-}
-
-.hero-content{
-    position:relative;
-    z-index:2;
-    color:#fff;
-    text-align:center;
-}
-
-.hero h1{
-    font-size:52px;
-    color:#fff;
-}
-
-.hero h2{
-    color:#ffd700;
-}
-
-.hero p{
-    color:#fff;
-}
-
-.player-left,
-.player-right{
-    position:absolute;
-    bottom:0;
-    width:230px;
-    z-index:2;
-}
-
-.player-left{
-    left:20px;
-}
-
-.player-right{
-    right:20px;
-}
-
-@media(max-width:768px){
-    .player-left,
-    .player-right{
-        width:120px;
-    }
-
-    .hero h1{
-        font-size:34px;
-    }
-}
 
 *{
 margin:0;
@@ -84,6 +20,73 @@ font-family:Arial,Helvetica,sans-serif;
 background:#f5f5f5;
 color:#222;
 line-height:1.6;
+}
+
+.hero{
+position:relative;
+background:url("file_00000000753881fb9b33012616a6fbb0.png") center center/cover no-repeat;
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.55);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+color:#fff;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:52px;
+}
+
+.hero h2{
+color:#ffd700;
+margin:10px 0;
+}
+
+.hero p{
+font-size:20px;
+}
+
+nav{
+background:#0b3d91;
+padding:15px;
+position:sticky;
+top:0;
+z-index:999;
+box-shadow:0 2px 10px rgba(0,0,0,.3);
+}
+
+nav ul{
+display:flex;
+justify-content:center;
+gap:20px;
+list-style:none;
+flex-wrap:wrap;
+}
+
+nav a{
+color:#fff;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#ffd700;
 }
 
 header{
@@ -104,8 +107,7 @@ margin-bottom:15px;
 }
 
 header p{
-font-size:22px;
-font-weight:bold;
+font-size:20px;
 }
 
 section{
@@ -145,151 +147,242 @@ text-align:center;
 padding:20px;
 margin-top:30px;
 }
-footer{
-background:#111;
-color:#fff;
-text-align:center;
-padding:20px;
-margin-top:30px;
-}
 
-/* 👇 YAHAN PASTE KARO */
+@media(max-width:768px){
 
-nav{
-background:#0b3d91;
-padding:15px;
-    <nav>
-<ul>
-<li><a href="#">Home</a></li>
-<li><a href="#">Registration</a></li>
-<li><a href="#">Teams</a></li>
-<li><a href="#">Fixtures</a></li>
-<li><a href="#">Points Table</a></li>
-<li><a href="#">Gallery</a></li>
-<li><a href="#">Contact</a></li>
-</ul>
-</nav>
-position:sticky;
-top:0;
-z-index:999;
+.hero h1{
+font-size:34px;
 }
 
 nav ul{
-display:flex;
-justify-content:center;
-gap:20px;
-list-style:none;
-flex-wrap:wrap;
+gap:10px;
+font-size:14px;
 }
 
-nav a{
-color:#fff;
-text-decoration:none;
-font-weight:bold;
-}
-
-nav a:hover{
-color:#ffd700;
 }
 
 </style>
-</style>
-
 </head>
 
 <body>
+
 <div class="hero">
-  <div class="hero-content">
-    <h1>🏏 Kanpur Cricket Championship</h1>
-    <h2>Season 1</h2>
-    <p>In Memory of International Urdu Poet<br>Nadeem Nayyer Kanpuri</p>
-  </div>
-</div>
-<header>
-<div style="text-align:center; margin-bottom:20px;">
-    <img src="file_000000005b6081faa1a7bcee871ce334.png"
-         alt="KCC Trophy"
-         style="max-width:220px;width:100%;filter:drop-shadow(0 8px 20px rgba(0,0,0,.35));">
+
+<div class="hero-content">
+
+<h1>🏏 Kanpur Cricket Championship</h1>
+
+<h2>Season 1</h2>
+
+<p>
+In Memory of International Urdu Poet
+<br>
+Nadeem Nayyer Kanpuri
+</p>
+
 </div>
 
-<p style="font-size:18px;color:#ffd700;letter-spacing:1px;">
+</div>
+
+<nav>
+
+<ul>
+
+<li><a href="#">🏠 Home</a></li>
+
+<li><a href="#">📝 Registration</a></li>
+
+<li><a href="#">👥 Teams</a></li>
+
+<li><a href="#">📅 Fixtures</a></li>
+
+<li><a href="#">📊 Points Table</a></li>
+
+<li><a href="#">📸 Gallery</a></li>
+
+<li><a href="#">📞 Contact</a></li>
+
+</ul>
+
+</nav>
+
+<header>
+
+<div style="text-align:center;margin-bottom:20px;">
+
+<img
+src="file_000000005b6081faa1a7bcee871ce334.png"
+alt="KCC Trophy"
+style="max-width:220px;width:100%;">
+
+</div>
+
+<p style="color:#ffd700;letter-spacing:1px;">
+
 OFFICIAL CRICKET TOURNAMENT
+
 </p>
+
 <h1>🏏 Kanpur Cricket Championship (KCC)</h1>
 
 <h2>Season 1</h2>
 
-<p>In Memory of International Urdu Poet<br>
-Nadeem Nayyer Kanpuri</p>
+<p>
+
+In Memory of International Urdu Poet
+
+<br>
+
+Nadeem Nayyer Kanpuri
+
+</p>
 
 </header>
-
 <section>
 
 <h3>🏆 Welcome</h3>
 
 <p>
-Welcome to the official website of Kanpur Cricket Championship (KCC).
-Stay updated with fixtures, registrations, points table,
-live scores and tournament news.
+Welcome to the official website of <b>Kanpur Cricket Championship (KCC)</b>.
+Stay updated with tournament registrations, fixtures, points table,
+live scores, news and match updates.
 </p>
 
-<a class="button" href="#">Team Registration</a>
+<a class="button" href="#">
+📝 Team Registration
+</a>
 
 </section>
+
 <section>
 
 <h3>📅 Tournament Information</h3>
 
-<p><b>Tournament:</b> Kanpur Cricket Championship (KCC)</p>
+<p><b>🏏 Tournament:</b> Kanpur Cricket Championship (KCC)</p>
 
-<p><b>Season:</b> Season 1</p>
+<p><b>🏆 Season:</b> Season 1</p>
 
-<p><b>Start Date:</b> 03 October 2026</p>
+<p><b>📅 Start Date:</b> 03 October 2026</p>
 
-<p><b>Status:</b> Registration Opening Soon</p>
+<p><b>📍 Venue:</b> Kanpur, Uttar Pradesh</p>
+
+<p><b>📢 Status:</b> Registration Opening Soon</p>
+
+<p><b>🎖 Tribute:</b> International Urdu Poet Nadeem Nayyer Kanpuri</p>
 
 </section>
-
 <section>
 
 <h3>🏆 Tribute</h3>
 
-<img src="Screenshot_20260722_005424.jpg" alt="Nadeem Nayyer Kanpuri">
+<img src="Screenshot_20260722_005424.jpg"
+alt="Nadeem Nayyer Kanpuri">
 
-<p style="text-align:center;font-weight:bold;">
-International Urdu Poet<br>
+<p style="text-align:center;font-size:20px;font-weight:bold;margin-top:15px;">
+
+International Urdu Poet
+
+<br><br>
+
 Nadeem Nayyer Kanpuri
+
+</p>
+
+<p style="text-align:center;margin-top:10px;">
+
+This tournament is dedicated to the loving memory of
+International Urdu Poet
+<b>Nadeem Nayyer Kanpuri</b>.
+
+</p>
+
+</section>
+
+
+<section>
+
+<h3>🏆 Championship Trophy</h3>
+
+<img
+src="file_000000005b6081faa1a7bcee871ce334.png"
+alt="KCC Championship Trophy">
+
+<p style="text-align:center;font-size:18px;font-weight:bold;margin-top:15px;">
+
+Official Trophy of
+
+Kanpur Cricket Championship (KCC)
+
+Season 1
+
 </p>
 
 </section>
 <section>
 
-<h3>🏆 Championship Trophy</h3>
-
-<img src="file_000000005b6081faa1a7bcee871ce334.png" alt="KCC Trophy">
-
-</section>
-  <section>
-
 <h3>📊 Coming Soon</h3>
 
 <ul>
-<li>Team Registration</li>
-<li>Registered Teams</li>
-<li>Fixtures</li>
-<li>Points Table</li>
-<li>Live Scores</li>
-<li>Gallery</li>
-<li>Contact</li>
+
+<li>📝 Team Registration</li>
+
+<li>👥 Registered Teams</li>
+
+<li>📅 Match Fixtures</li>
+
+<li>📊 Points Table</li>
+
+<li>🏏 Live Scores</li>
+
+<li>🎥 Live Streaming</li>
+
+<li>📸 Gallery</li>
+
+<li>🏆 Player Statistics</li>
+
+<li>📰 Tournament News</li>
+
+<li>📞 Contact Us</li>
+
 </ul>
+
+</section>
+
+<section>
+
+<h3>📞 Contact</h3>
+
+<p><b>Kanpur Cricket Championship (KCC)</b></p>
+
+<p>📍 Kanpur, Uttar Pradesh, India</p>
+
+<p>🏏 Official Cricket Tournament</p>
+
+<p>🌐 Official Website</p>
 
 </section>
 
 <footer>
 
-© 2026 Kanpur Cricket Championship (KCC)<br>
-Official Website
+<h3 style="color:#ffd700;">Kanpur Cricket Championship (KCC)</h3>
+
+<p>
+Season 1
+</p>
+
+<p>
+In Memory of International Urdu Poet
+<br>
+Nadeem Nayyer Kanpuri
+</p>
+
+<br>
+
+<p>
+© 2026 Kanpur Cricket Championship (KCC)
+<br>
+All Rights Reserved.
+</p>
 
 </footer>
 
