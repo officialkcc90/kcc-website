@@ -1,212 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>KCC Team Registration</title>
+<title>KCC Team Registration | Kanpur Cricket Championship</title>
 
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
-body{
-background:#f2f5fa;
-}
-
-header{
-background:#003b8e;
-color:white;
-text-align:center;
-padding:30px 15px;
-}
-
-header img{
-width:120px;
-height:120px;
-border-radius:50%;
-background:white;
-padding:8px;
-}
-
-header h1{
-margin-top:15px;
-font-size:30px;
-}
-
-header h3{
-color:#FFD700;
-margin-top:8px;
-}
-
-.container{
-max-width:900px;
-margin:auto;
-padding:20px;
-}
-
-.card{
-background:white;
-padding:20px;
-margin-top:20px;
-border-radius:12px;
-box-shadow:0 0 12px rgba(0,0,0,.15);
-}
-
-.card h2{
-color:#003b8e;
-margin-bottom:20px;
-text-align:center;
-}
-
-label{
-font-weight:bold;
-display:block;
-margin-top:15px;
-}
-
-input,
-textarea,
-select{
-width:100%;
-padding:12px;
-margin-top:5px;
-border:1px solid #ccc;
-border-radius:8px;
-font-size:16px;
-}
-
-.payment{
-background:#fff8dc;
-border:2px dashed orange;
-padding:20px;
-margin-top:20px;
-border-radius:10px;
-text-align:center;
-}
-
-button{
-width:100%;
-padding:15px;
-background:#0b7d2c;
-color:white;
-border:none;
-border-radius:8px;
-font-size:18px;
-font-weight:bold;
-margin-top:20px;
-cursor:pointer;
-}
-
-footer{
-background:#003b8e;
-color:white;
-text-align:center;
-padding:20px;
-margin-top:40px;
-}
-
-</style>
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<header>
+<header class="header">
 
-<img src="file_00000000ada88208a6ac3906a3fcd45a.png" alt="KCC Logo">
+<img src="logo.png" alt="KCC Logo" class="logo">
 
 <h1>Kanpur Cricket Championship</h1>
 
-<h3>Season 1</h3>
+<h2>Season 1</h2>
 
-<p>Official Team Registration Portal</p>
+<p class="subtitle">
+Official Team Registration Portal
+</p>
 
 </header>
 
 <div class="container">
 
-<div class="card">
+<form id="registrationForm" class="card">
 
 <h2>🏏 Team Registration Form</h2>
+
 <label>Team Name *</label>
-<input type="text" placeholder="Enter Team Name" required>
+<input
+type="text"
+id="teamName"
+placeholder="Enter Team Name"
+required>
 
 <label>City *</label>
-<input type="text" placeholder="Enter City" required>
+<input
+type="text"
+id="city"
+placeholder="Enter City"
+required>
 
 <label>Team Logo (Optional)</label>
-<input type="file">
+<input
+type="file"
+id="teamLogo"
+accept="image/*">
 
 <label>Captain Name *</label>
-<input type="text" placeholder="Enter Captain Name" required>
+<input
+type="text"
+id="captain"
+placeholder="Enter Captain Name"
+required>
 
 <label>Mobile Number *</label>
-<input type="tel" placeholder="Enter Mobile Number" required>
+<input
+type="tel"
+id="mobile"
+placeholder="Enter Mobile Number"
+required>
 
 <label>WhatsApp Number *</label>
-<input type="tel" placeholder="Enter WhatsApp Number" required>
+<input
+type="tel"
+id="whatsapp"
+placeholder="Enter WhatsApp Number"
+required>
 
 <label>Email Address *</label>
-<input type="email" placeholder="Enter Email Address" required>
-
-<div class="payment">
+<input
+type="email"
+id="email"
+placeholder="Enter Email Address"
+required>
+<div class="payment-box">
 
 <h2>💳 Registration Payment</h2>
 
-<p><b>Total Team Entry Fee:</b> ₹55,000</p>
+<p><strong>Total Team Entry Fee:</strong> ₹55,000</p>
 
-<p><b>Registration Token:</b> ₹5,000</p>
+<p><strong>Registration Token:</strong> ₹5,000</p>
 
-<p><b>UPI ID:</b> 6394647991@ptyes</p>
+<p><strong>UPI ID:</strong> 6394647991@ptyes</p>
 
-<p style="color:red;font-weight:bold;">
+<p class="payment-note">
 Registration will be confirmed only after payment verification.
 </p>
 
-<img src="IMG_20260722_093958.jpg"
+<img
+src="IMG_20260722_093958.jpg"
 alt="KCC Payment QR"
-style="width:250px;max-width:100%;border-radius:10px;">
+class="qr-image">
 
-<label>Transaction / UTR Number *</label>
-<input type="text" placeholder="Enter Transaction / UTR Number">
+<label>Transaction / UTR Number (Optional)</label>
+<input
+type="text"
+id="utr"
+placeholder="Enter Transaction / UTR Number">
 
-<label>Upload Payment Screenshot *</label>
-<input type="file">
+<label>Upload Payment Screenshot (Optional)</label>
+<input
+type="file"
+id="paymentScreenshot"
+accept="image/*">
 
 </div>
 
-<label>
-<input type="checkbox" required>
+<label class="checkbox">
+
+<input
+type="checkbox"
+required>
+
 I agree to all KCC Tournament Rules & Regulations.
+
 </label>
 
-<button type="submit">
+<button type="submit" class="register-btn">
+
 🏏 Register Team
+
 </button>
 
-</div>
+<div
+id="successMessage"
+class="success-message">
+
+✅ Team Registered Successfully!
 
 </div>
+</form>
 
-<footer>
+</div>
 
-<p><b>Kanpur Cricket Championship (KCC)</b></p>
+<footer class="footer">
 
-<p>Email: officialkcc90@gmail.com</p>
+<h3>Kanpur Cricket Championship (KCC)</h3>
 
-<p>WhatsApp: +91 6394647991</p>
+<p><strong>Email:</strong> officialkcc90@gmail.com</p>
 
-<p>Website: officialkcc90.github.io/kcc-website</p>
+<p><strong>WhatsApp:</strong> +91 6394647991</p>
+
+<p><strong>Website:</strong> officialkcc90.github.io/kcc-website</p>
 
 <p>© 2026 Kanpur Cricket Championship. All Rights Reserved.</p>
 
 </footer>
 
+<script type="module" src="app.js"></script>
+
 </body>
+
 </html>
