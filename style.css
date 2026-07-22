@@ -83,11 +83,19 @@ border-radius:10px;
 text-align:center;
 }
 
-.qr{
-width:250px;
+.qr-image{
+width:220px;
+height:auto;
 max-width:100%;
-margin-top:15px;
+display:block;
+margin:15px auto;
 border-radius:10px;
+}
+
+@media (max-width:768px){
+.qr-image{
+width:160px;
+}
 }
 
 .warning{
