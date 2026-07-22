@@ -52,6 +52,7 @@ form.addEventListener("submit", async (e) => {
       utr,
       createdAt: serverTimestamp()
     });
+    alert("✅ Team Registered Successfully!");
         successMessage.style.display = "block";
 
     form.reset();
