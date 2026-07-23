@@ -98,7 +98,28 @@ Google Analytics
 
 </div>
 
-<script>
+
+<script type="module">
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
+import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
+import {
+  getAuth,
+  signInWithEmailAndPassword
+} from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
+const firebaseConfig = {
+  apiKey: "AIzaSyB7FSWjvzqwMahwOY55KbVow6_Y8r8vbx8",
+  authDomain: "kcc-registration.firebaseapp.com",
+  projectId: "kcc-registration",
+  storageBucket: "kcc-registration.firebasestorage.app",
+  messagingSenderId: "719610715810",
+  appId: "1:719610715810:web:cffe40efed97e992a641fb",
+  measurementId: "G-48SK77DVMT"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
 async function login(){
 
 const email = document.getElementById("email").value;
@@ -120,25 +141,8 @@ alert("Login Failed");
 }
 
 }
-</script>
-<script type="module">
 
-import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
-import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
-
-const firebaseConfig = {
-  apiKey: "AIzaSyB7FSWjvzqwMahwOY55KbVow6_Y8r8vbx8",
-  authDomain: "kcc-registration.firebaseapp.com",
-  projectId: "kcc-registration",
-  storageBucket: "kcc-registration.firebasestorage.app",
-  messagingSenderId: "719610715810",
-  appId: "1:719610715810:web:cffe40efed97e992a641fb",
-  measurementId: "G-48SK77DVMT"
-};
-
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-
+window.login = login;
 async function loadRegistrations(){
 const snap = await getDocs(collection(db,"registrations"));
 document.getElementById("totalReg").innerText = snap.size;
