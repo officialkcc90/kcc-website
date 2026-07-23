@@ -99,24 +99,53 @@ Google Analytics
 </div>
 
 <script>
-function login(){
+async function login(){
 
-const pass=document.getElementById("password").value;
+const email = document.getElementById("email").value;
+const password = document.getElementById("password").value;
 
-if(pass==="12345"){
+try{
+
+await signInWithEmailAndPassword(auth,email,password);
 
 document.getElementById("loginBox").style.display="none";
-
 document.getElementById("dashboard").style.display="block";
 
-}else{
+loadRegistrations();
 
-alert("Wrong Password");
+}catch(error){
+
+alert("Login Failed");
 
 }
 
 }
 </script>
+<script type="module">
 
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
+import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyB7FSWjvzqwMahwOY55KbVow6_Y8r8vbx8",
+  authDomain: "kcc-registration.firebaseapp.com",
+  projectId: "kcc-registration",
+  storageBucket: "kcc-registration.firebasestorage.app",
+  messagingSenderId: "719610715810",
+  appId: "1:719610715810:web:cffe40efed97e992a641fb",
+  measurementId: "G-48SK77DVMT"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+async function loadRegistrations(){
+const snap = await getDocs(collection(db,"registrations"));
+document.getElementById("totalReg").innerText = snap.size;
+}
+
+loadRegistrations();
+
+</script>
 </body>
 </html>
